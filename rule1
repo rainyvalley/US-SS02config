@@ -1,0 +1,4 @@
+Rule1
+  on AHT2X#Humidity>50 do backlog RuleTimer1 1200; power 1 endon
+  on power1#state do RuleTimer1 1200 endon
+  on Rules#Timer=1 do backlog RuleTimer1 0; AHT2X#Humidity<45; power 0 endon
